@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#menu_movil {
+    display: none; 
+}
+
+
+#title_bicletas, #title_repuestos{
+    font-family: 'Playfair Display SC';
+    padding: 33px;
+}
+
+header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > a > img{
+    width: 160px;
+}
+
+.titulo {
+    color: black;
+    font-size: 70px;
+}
+
+.titulo > span {
+    color: black;
+}
+
+nav {
+    display: none;
+}
+
+header button {
+    display: none;
+}
+
+.bicicletas_montaña , .repuestos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    gap: 2em;
+}
+
+.card img {
+    width: 51%;
+}
+
+.card .utilidades {
+    display: none;
+}
+
+footer {
+    display: none;
+}

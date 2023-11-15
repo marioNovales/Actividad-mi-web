@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Roboto&display=swap');
+:root {
+    --text-color-button: #6C3428;
+    --background-button: #7EAA92;
+    --text-color-title: #186F65;
+    --background-header: #E2C799;
+    --background-footer: #BC9757;
+    --background-card: #C9B086;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: 'Playfair Display SC';
+}
+
+.añadir_producto form {
+    display: grid;
+    padding: 3vw;
+    grid-gap: 10vw;
+    grid-template-columns: repeat(auto-fit, minmax(40%,1fr));
+}
+
+.form_derecha > div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.form_derecha > div > div {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.form_iz {
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+    padding-right: 5vw;
+}
+
+
+.form_iz > div {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    gap: 1em;
+    background-color: var(--background-footer);
+    border-radius: 15px;
+}
+
+.form_iz div > .insercion, .form_iz div > select, .form_iz > div > textarea,.form_derecha > div  { 
+    border-radius: 15px;
+    padding: 2%;
+    resize: none;
+}
+
+.insercion, #prev_imagen{
+    border: 2px var(--text-color-button) solid;
+}
+
+.form_derecha > div {
+    background-color: var(--background-footer);
+}
+
+.insercion[type="file"]{
+    display: none;
+}
+
+
+.insercion:hover, label:hover {
+    cursor: pointer;
+}
+
+.descripcion {
+    size: 200;
+    padding: 1%;
+}
+
+select {
+    display: flex;
+}
+
+#titulo_añadir {
+    font-family: 'Playfair Display SC';
+    padding: 1%;
+    align-self: center;
+}
+
+#btn_añadir {
+    margin-top: 4%;
+    padding: 1%;
+    align-self: center;
+    width: 40vw;
+}
+
+#prev_imagen {
+    margin: 3% auto 7% auto;
+    border-radius: 15px;
+    background: white;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    padding: 5%;
+}
+
+#prev_imagen img {
+    width: 80%;
+    height: 80%;   
+}
+
+
+@media screen and (max-width:750px) {
+
+    .añadir_producto form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form_iz > div {
+        width: 70vw;
+    }
+    
+    .form_derecha > div{
+        width: 70vw;
+        padding:2vw;   
+    }
+    
+    #btn_añadir {
+        padding: 1%;
+        align-self: center;
+        width: 60vw;
+    }
+}

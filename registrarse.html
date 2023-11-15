@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login up</title>
+    <link rel="stylesheet" href="css/registrarse.css">
+    <link rel="shortcut icon" href="img/logoBT.svg" />
+</head>
+<body>
+    <div class="inicio_sesion">
+        <div class="titulo_inicioSesion">
+            <h1>
+                Bike<span>Trail</span>
+            </h1>
+            <h2>Registrarse</h2>
+        </div>
+        <div class="formulario">
+            <form action="" method="post">
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email"
+                    placeholder="email"
+                />
+                <input 
+                    type="text" 
+                    name="name" 
+                    id="name"
+                    placeholder="nombre"
+                />
+                <input 
+                    type="text" 
+                    name="username" 
+                    id="username"
+                    placeholder="nombre de usuario"
+                />
+                <input 
+                    type="password" 
+                    name="password" 
+                    id="password"
+                    required pattern="^.{8,}$"
+                    placeholder="contraseña"
+                />
+                <input 
+                    type="password" 
+                    name="password" 
+                    id="password"
+                    required pattern="^.{8,}$"
+                    placeholder="repite la contraseña"
+                />
+            </form>
+            <button type="submit" onclick="location.href='index.html'" >
+                Login up
+            </button>
+        </div>
+        <div class="enlaces">
+            <img src="img/logoBT.svg" alt="Logo BikeTrail">
+            <button type="button">
+                <a href="index.html">Sign up</a> 
+            </button>
+        </div>
+    </div>
+</body>
+</html>

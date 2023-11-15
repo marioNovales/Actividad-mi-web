@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Roboto&display=swap');
+
+:root {
+    --text-color-button: #6C3428;
+    --background-button: #7EAA92;
+    --text-color-title: #186F65;
+    --background-header: #E2C799;
+    --background-footer: #BC9757;
+    --background-card: #C9B086;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+Selector de tipo body
+*/
+body {
+    background-image: url("../img/image\ 7.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    height: 100vh;
+}
+
+.inicio_sesion {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    padding: 1.6em;
+    border-radius: 50px;
+    gap: 2em;
+}
+
+.titulo_inicioSesion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color-button);
+}
+
+.titulo_inicioSesion > h1 {
+    font-size: 80px;
+    font-weight: 400;
+    font-family: 'Playfair Display SC';
+}
+
+.titulo_inicioSesion span {
+    color: var(--text-color-title);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 95%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;   
+}
+
+/* 
+    Selector de pseudoelemntos
+*/
+input::placeholder, input {
+    text-align: center;
+    color: var(--text-color-button);
+    font-weight: bold;
+}
+
+input {
+    border: 2px solid var(--background-button);
+    border-radius: 15px;
+    padding: 4%;
+    font-size: 1.23em;
+}
+
+/*
+    Selector de pseudoclse
+*/
+input:invalid {
+    background-color: rgb(235, 12, 12,0.5);
+}
+
+input:valid {
+    background-color: rgb(7, 214, 7,0.6);
+}
+
+button {
+    background-color: var(--background-button);
+    color: var(--text-color-button);
+    font-weight: bold;
+    padding: 8% ;
+    font-size: 1.23em;
+}
+
+button:active, .enlaces button:active, .formulario button:active {
+    border: 2px solid white;
+}
+
+button:hover, .enlaces button:hover, .formulario button:hover {
+    cursor: pointer;
+}
+
+.formulario button {
+    border: 2px solid var(--background-button);
+    border-radius: 15px;
+}
+
+.enlaces {
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.enlaces button {
+   
+    display: flex;
+    border-radius: 50px;
+    border: 2px solid var(--background-button);
+    padding: 4% 8% 4% 8%;
+    font-size: 1.25em;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: var(--text-color-button);
+    text-decoration: none;
+}
+
+
+.enlaces img {
+    display: flex;
+    flex-shrink: 2;
+    width: 40%;
+}
+
+
+@media screen and (max-width:750px) {
+
+    body {
+        background-image: url("../img/image\ 7.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .inicio_sesion {
+        width: 60vw;
+    }
+
+    .titulo_inicioSesion > h1 {
+        font-size: 12vw;
+        font-weight: 400;
+        font-family: 'Playfair Display SC';
+    }
+
+    /*
+    Selector adyacente y selector hijo. Selectores combinados
+    */
+    .titulo_inicioSesion > h1 + h2 {
+        font-size: 4vw;
+    }
+
+    .enlaces button {
+        font-size: 90%;
+    }
+
+}

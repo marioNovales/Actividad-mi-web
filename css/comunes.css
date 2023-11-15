@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Roboto&display=swap');
+
+
+:root {
+    --text-color-button: #6C3428;
+    --background-button: #7EAA92;
+    --text-color-title: #186F65;
+    --background-header: #E2C799;
+    --background-footer: #BC9757;
+    --background-card: #C9B086;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 
+    Selector por id
+*/
+
+#menu_movil {
+    width: 5vw;
+    padding-right: 5%;
+    display: none;
+}
+
+#submenu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--background-header);
+    color: var(--text-color-button);
+}
+
+#submenu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submenu a{
+    text-decoration: none;
+    border: 0;
+    background-color: var(--background-header);
+}
+
+#cuenta {
+    padding: 4% 12%;
+}
+
+nav a:hover{
+    font-size: 1.1em;
+}
+
+header{
+    padding: 2%;
+    background: var(--background-header);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img{
+    width: 13vw;
+}
+
+/* 
+    Selector de tipo calse
+*/
+.titulo {
+    display: flex;
+    align-items: center;
+    color: var(--text-color-button);
+    font-size: 9vw;
+    font-weight: 400;
+    font-family: 'Playfair Display SC';
+}
+
+.titulo span {
+    color: var(--text-color-title);
+}
+
+nav {
+    background: var(--background-header);
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+nav  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#enlaces_paginas   {
+   width: 100%;
+    display: flex;
+    justify-content: space-between; 
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* 
+    Agrupacion de selectores de tipo
+*/
+nav a, button {
+    display: block;
+    background-color: var(--background-button);
+    color: var(--text-color-button);
+    font-weight: bold;
+    padding: 2% 8%;
+    font-size: 1em;
+    border: 2px solid var(--background-button);
+    border-radius: 50px;
+    font-family: 'Roboto';
+}
+
+/* 
+    Selector descendiente
+*/
+header button {
+    padding: 1% 5% ;
+}
+
+nav a:active, button:active{
+    border: 3px solid white;
+}
+
+nav a:hover , button:hover{
+    cursor: pointer;
+}
+
+nav input {
+    background: white;
+    border: 2px solid var(--text-color-button);
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 4% 10%;
+    font-size: 1em;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    background: var(--background-footer);
+    margin-top: 5vh;
+}
+
+/* 
+    Selector de clase dentro de un tipo concreto
+*/
+footer .copyright {
+    display: flex;
+    font-family: 'roboto';
+    font-size: 1.2em;
+    align-items: center;
+    gap: 1vw;
+}
+
+footer .redesSociales {
+   display: flex;
+   gap: 1em;
+}
+
+.redesSociales img, .copyright img {
+    width: 3vw;
+}
+
+@media screen and (max-width:900px) {
+    
+    header{
+        padding: 2%;
+        justify-content: space-between;
+    }
+
+    #submenu{
+        display: none;
+    }
+
+    #submenu > li{
+      background-color: var(--background-header); 
+    }
+
+    #menu_movil {
+        width: 7vw;
+        display: flex;
+        background-color: var(--background-header);
+        border: 0;
+    }
+
+    #menu_movil:hover {
+        cursor: pointer;
+    }
+
+    header button {
+        display: none;
+    }
+
+    #navmovil{
+        display: none;
+    }
+
+    nav ul, nav ul li{
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        background-color: var(--background-header);
+        color: var(--text-color-button);
+        font-weight: bold;
+        border: 0;
+        border-radius: 0;
+        font-size: 1em;
+        padding: 2%;
+        font-family: 'Roboto';
+    }
+    nav a:hover{
+        font-size: 1.5em;
+    }
+    
+
+    footer {
+        padding: 2%;
+    }
+
+    footer .copyright {
+        font-size: 0.9em;
+    }
+
+    .redesSociales img, .copyright img {
+        width: 8vw;
+    }
+
+
+}
